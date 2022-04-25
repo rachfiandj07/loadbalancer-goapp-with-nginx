@@ -23,7 +23,7 @@ func main() {
 	router.GET("/leastConnection", getApp)
 	router.GET("/ipHash", getApp)
 
-	router.Run("localhost:8080")
+	router.Run(":8080")
 }
 
 func getApp(c *gin.Context) {
