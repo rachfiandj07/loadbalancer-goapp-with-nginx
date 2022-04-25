@@ -31,7 +31,7 @@ func getApp(c *gin.Context) {
 	// Note: without explicit zone, returns time in given location.
 
 	var response = []Response{
-		{Description: fmt.Sprintf("Hi, this is from app %s", os.Args), Name: "Blue Train", Timestamp: t, Hostname: c.Request.RemoteAddr, Method: c.Request.Method},
+		{Description: fmt.Sprintf("Hi, this is from app %s", os.Args[1:]), Name: "Blue Train", Timestamp: t, Hostname: c.Request.RemoteAddr, Method: c.Request.Method},
 	}
 	c.IndentedJSON(http.StatusOK, response)
 }
